@@ -31,6 +31,6 @@ class MultiAssetMinorityGame(ap.Model):
 
     def get_strategy(self, strategy):
         if strategy == 'random':
-            return (RandomStrategy())
+            return RandomStrategy()
 
         
