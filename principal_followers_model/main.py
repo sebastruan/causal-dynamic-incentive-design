@@ -15,5 +15,8 @@ parameters = {
     'r_over': -5.0,
 }
 
-exp = ap.Experiment(PrincipalFollowersModel, parameters, iterations=20, randomize=True)
+sample = ap.Sample(parameters)  # creates a grid of all parameter combinations
+exp = ap.Experiment(PrincipalFollowersModel, sample, iterations=20, randomize=True)
+
+
 results = exp.run()

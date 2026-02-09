@@ -74,12 +74,6 @@ class PrincipalFollowersModel(ap.Model):
         for j in range(self.p.L):
             self.record(f'occupancy_place_{j}', occ[j])
 
-        print(f"Step {self.t}: System reward = {system_reward}, Occupancies = {occ}")
-        print(f"  Principal plan: {plan}")
-        print(f"  Follower rewards: {[f.reward for f in self.followers]}")
-        print(f"  Total system reward so far: {self.total_system_reward}")
-
-        
     def end(self):
         # Useful summary metrics
         avg_step_reward = self.total_system_reward / max(1, self.p.steps)
